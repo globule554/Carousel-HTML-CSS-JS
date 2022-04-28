@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.carousel{
+    margin: auto;
+    margin-top: 50px;
+
+    display: flex ;
+    width: 1500px;
+
+   
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow: hidden;   
+   scroll-behavior: smooth;
+   scroll-snap-type: x mandatory;
+  
+}
+
+
+.item{
+
+    background-color: aliceblue;
+    border:1px solid black;
+    
+    height:380px;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    flex: none;
+    
+   
+}
+
+.item span{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+nav{
+    
+    text-align: center;
+    display: flex   ;
+    width:200px;
+    margin: auto;
+    justify-content: space-evenly;
+    padding-top: 5px;
+}
+
+
+.btn{
+    display: block;
+    height:5px;
+    width: 30px;
+    background-color: #333;
+    /* border-radius: 50%; */
+}
