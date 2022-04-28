@@ -9,8 +9,8 @@
     margin: auto;
     margin-top: 50px;
 
-    display: flex ;
-    width: 1500px;
+   
+    width: 1597px;
 
    
     -webkit-overflow-scrolling: touch;
@@ -19,6 +19,11 @@
    scroll-behavior: smooth;
    scroll-snap-type: x mandatory;
   
+}
+
+.frame{
+    animation: scroll 10s linear infinite;
+     display: flex ;
 }
 
 
@@ -33,7 +38,7 @@
     scroll-snap-stop: always;
     flex: none;
     
-   
+  
 }
 
 .item span{
@@ -45,6 +50,60 @@
 
 }
 
+/*
+*       4 items
+*/
+
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0%);
+      transition-timing-function: ease-out;
+    }
+
+    20% {
+        transform: translateX(-100%);
+        transition-timing-function: ease-out;
+    }
+
+    25% {
+        transform: translateX(-100%);
+        transition-timing-function: ease-out;
+    }
+
+
+    45% {
+        transform: translateX(-200%);
+        transition-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translateX(-200%);
+        transition-timing-function: ease-out;
+    }
+
+
+    70% {
+        transform: translateX(-300%);
+        transition-timing-function: ease-out;
+    }
+    75% {
+        transform: translateX(-300%);
+        transition-timing-function: ease-out;
+    }
+  
+    95% {
+      transform: translateX(-400%);
+      transition-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translateX(-400%);
+       
+      }
+
+  }
 
 nav{
     
