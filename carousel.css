@@ -8,22 +8,15 @@
 .carousel{
     margin: auto;
     margin-top: 50px;
-
-   
     width: 1597px;
-
-   
-    -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
     overflow: hidden;   
-   scroll-behavior: smooth;
-   scroll-snap-type: x mandatory;
+   
   
 }
 
 .frame{
-    animation: scroll 10s linear infinite;
      display: flex ;
+     transition: margin-left .75s ease-out;
 }
 
 
@@ -51,75 +44,58 @@
 }
 
 /*
-*       4 items
+*   buttons indicator
 */
 
-
-
-@keyframes scroll {
-    0% {
-      transform: translateX(0%);
-      transition-timing-function: ease-out;
-    }
-
-    20% {
-        transform: translateX(-100%);
-        transition-timing-function: ease-out;
-    }
-
-    25% {
-        transform: translateX(-100%);
-        transition-timing-function: ease-out;
-    }
-
-
-    45% {
-        transform: translateX(-200%);
-        transition-timing-function: ease-out;
-    }
-
-    50% {
-        transform: translateX(-200%);
-        transition-timing-function: ease-out;
-    }
-
-
-    70% {
-        transform: translateX(-300%);
-        transition-timing-function: ease-out;
-    }
-    75% {
-        transform: translateX(-300%);
-        transition-timing-function: ease-out;
-    }
-  
-    95% {
-      transform: translateX(-400%);
-      transition-timing-function: ease-out;
-    }
-
-    100% {
-        transform: translateX(-400%);
-       
-      }
-
-  }
-
-nav{
+.indicators{
     
     text-align: center;
-    display: flex   ;
-    width:200px;
+    
     margin: auto;
-    justify-content: space-evenly;
-    padding-top: 5px;
+   
+    padding: 5px;
+ 
 }
 
 
 .btn{
-    display: block;
+    display: inline-block;
     height:5px;
     width: 30px;
     background-color: #333;
-    /* border-radius: 50%; */
 }
+
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #CCC;
+}
+
+/*
+*       radio buttons
+*/
+.rb{
+    display: none;
+}
+
+#rb1:checked ~ frame  {
+    margin-left: 0;
+ }
+ #rb2:checked ~ .frame {
+    margin-left: -100%;
+ }
+ #rb3:checked ~ .frame {
+    margin-left: -200%;
+ }
+ #rb4:checked ~ .frame {
+    margin-left: -300%;
+ }
+
+ #rb1:checked ~ .indicators  #btn1,
+ #rb2:checked ~ .indicators  #btn2,
+ #rb3:checked ~ .indicators  #btn3,
+ #rb4:checked ~ .indicators  #btn4
+ {
+    border:1px solid #BBB;
+    background-color: #999;
+ }
