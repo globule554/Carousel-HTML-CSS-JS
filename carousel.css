@@ -8,7 +8,8 @@
 .carousel{
     margin: auto;
     margin-top: 50px;
-    width: 1597px;
+    width: 80%;
+    height: 30%;
     overflow: hidden;   
    
   
@@ -16,33 +17,33 @@
 
 .frame{
      display: flex ;
-     transition: margin-left .75s ease-out;
+     width: 100%;
+     height: 100%;
+     transition: margin-left .75s ease-out; 
+     
 }
 
-
-.item{
-
-    background-color: aliceblue;
-    border:1px solid black;
-    
-    height:380px;
-
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+.frame .item{
+    width: 100%;
+    height: 100%;
     flex: none;
-    
+    flex-shrink: 0;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   
 }
-
-.item span{
-
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+@media only screen and (max-width: 768px) {
+   
+   
+    .carousel{
+        margin-top: 0px;
+        width: 100%;
+    }
 }
-
 /*
 *   buttons indicator
 */
@@ -54,15 +55,16 @@
     margin: auto;
    
     padding: 5px;
+    position: relative;
+    top:-25px
  
 }
-
-
+ 
 .btn{
     display: inline-block;
     height:5px;
-    width: 30px;
-    background-color: #333;
+    width: 3%;
+    background-color: #FFF;
 }
 
 
@@ -79,7 +81,7 @@
 }
 
 #rb1:checked ~ frame  {
-    margin-left: 0;
+    margin-left: 0%;
  }
  #rb2:checked ~ .frame {
     margin-left: -100%;
@@ -97,5 +99,5 @@
  #rb4:checked ~ .indicators  #btn4
  {
     border:1px solid #BBB;
-    background-color: #999;
+    background-color: red;
  }
