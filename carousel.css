@@ -6,6 +6,8 @@
 
 
 .carousel{
+
+    position: relative;
     margin: auto;
     margin-top: 50px;
     width: 80%;
@@ -64,13 +66,13 @@
     display: inline-block;
     height:5px;
     width: 3%;
-    background-color: #FFF;
+    background-color: rgba(255,255,255,.5);
 }
 
 
 .btn:hover{
     cursor: pointer;
-    background-color: #CCC;
+    background-color: rgba(255,255,255,.75);
 }
 
 /*
@@ -99,5 +101,34 @@
  #rb4:checked ~ .indicators  #btn4
  {
     border:1px solid #BBB;
-    background-color: red;
+    background-color: #DDD;
+ }
+
+
+ /*
+ *  ctr : prv / next
+ */
+
+ .arrows{
+    color: rgba(255, 255, 255, .50);
+    position: absolute;
+    top:45%;
+    transform: translateY(-50%);
+    width: 100%;
+     
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+     font-size: xx-large;
+ }
+
+
+ .ctr{
+     margin: 0px 5px;
+ }
+ 
+ .ctr:hover{
+     cursor: pointer;
+     color: rgba(255, 255, 255, .75);
  }
